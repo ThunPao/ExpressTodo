@@ -4,7 +4,7 @@ import { addUserToTaskSchema, valreqId } from '../validators';
 import { db } from '../db';
 const router = Router();
 
-router.post('/updatetaskuser/:id', async (req, res) => {
+router.put('/updatetaskuser/:id', async (req, res) => {
 
     const curId = valreqId.safeParse(req.params);
     if (!curId.success) {
@@ -49,7 +49,7 @@ router.post('/updatetaskuser/:id', async (req, res) => {
         return res.status(404).json({message: "ไม่พบข้อมูล"})
     }
     
-    return res.status(201).json(updatedTask);
+    return res.json(updatedTask);
   } catch (error) {
     // console.error('Error:', error);
     return res.status(500).json({ message: 'ไม่สามารถเพิ่ม User ไปยัง Task ได้' });
