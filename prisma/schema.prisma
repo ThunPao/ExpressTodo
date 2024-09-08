@@ -1,0 +1,56 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  user_id    Int      @id @default(autoincrement())
+  username   String
+  email      String   @unique
+  password   String
+  created_at DateTime @db.Timestamp() @default(now())
+  updated_at DateTime @db.Timestamp() @updatedAt
+  tasks      Task[]   @relation("UserTasks")
+  comments   Comment[]
+}
+
+model Task {
+  task_id     Int      @id @default(autoincrement())
+  title       String
+  description String
+  status      TaskStatus @default(PENDING)
+  priority    TaskPriority @default(MEDIUM)
+  due_date    DateTime @db.Date
+  created_at  DateTime @db.Timestamp() @default(now())
+  updated_at  DateTime @db.Timestamp() @updatedAt
+  users       User[]   @relation("UserTasks")
+  comments    Comment[]
+}
+
+enum TaskStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+}
+
+enum TaskPriority {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+model Comment {
+  comment_id Int      @id @default(autoincrement())
+  task_id    Int
+  user_id    Int
+  comment    String   @db.Text
+  created_at DateTime @db.Timestamp() @default(now())
+  updated_at DateTime @db.Timestamp() @updatedAt
+
+  task  Task  @relation(fields: [task_id], references: [task_id], onDelete: Cascade)
+  user  User  @relation(fields: [user_id], references: [user_id], onDelete: Cascade)
+}
