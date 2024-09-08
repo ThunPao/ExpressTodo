@@ -56,5 +56,32 @@ router.put('/updatetaskuser/:id', async (req, res) => {
 
   }
 });
+// Get Task ที่มี User ของ task นั้นๆ
+router.get('/taskusercomment', async (req, res) => {
+  const tasks = await db.task.findMany(
+    {
+      include: {
+        users: {
+          select: {
+            user_id: true,
+            username: true,
+            email: true
+          }
+        },
+        comments: {
+          select: {
+            comment_id: true,
+            user: {
+              select: { user_id: true, email: true, username: true }
+            },
+            comment: true
+          }
+        }
+      }
+    }
+  );
+  res.json(tasks);
+});
+
 
 export default router;

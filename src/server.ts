@@ -36,40 +36,15 @@ app.get('/protected', authenticateJWT, (req, res) => {
   );
 });
 
-// เรียกใช้ routes CRUD ตามเส้นที่ระบุ
-app.use('/users', userRouter);
-app.use('/tasks', taskRouter);
-app.use('/comments', commentRouter);
-// เรียกใช้ router โดยเส้นที่ระบุ อยู่ใน authRouter แล้ว เช่น /login /register
-app.use(authRouter);
-app.use(taskUserRouter);
+// เรียกใช้ routes CRUD ตามเส้นที่ระบุ (Auth Required)
+app.use('/users', authenticateJWT,userRouter);
+app.use('/tasks', authenticateJWT,taskRouter);
+app.use('/comments', authenticateJWT,commentRouter);
+app.use(authenticateJWT,taskUserRouter);
 
-// Get Task ที่มี User ของ task นั้นๆ
-app.get('/taskusercomment', async (req, res) => {
-  const tasks = await db.task.findMany(
-    {
-      include: {
-        users: {
-          select: {
-            user_id: true,
-            username: true,
-            email: true
-          }
-        },
-        comments: {
-          select: {
-            comment_id: true,
-            user: {
-              select: { user_id: true, email: true, username: true }
-            },
-            comment: true
-          }
-        }
-      }
-    }
-  );
-  res.json(tasks);
-});
+// เรียกใช้ router /login /register
+app.use(authRouter);
+
 
 
 const PORT = process.env.PORT || 3000;
