@@ -1,5 +1,9 @@
 # Todo Management
 โปรเจค Todo Management จัดการรายการสิ่งที่ต้องทำ
+##### Tech Stacks
+- Express Typescript
+- Prisma
+- MySql
 ## Features
 - สามารถจัดการระบบในรูปแบบ CRUD ได้ทั้ง User Task และ Comment
 - สามารถ Comment ไปยัง Task ที่ระบุได้หลาย Comment (One to Many)
