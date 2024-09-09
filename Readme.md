@@ -1,4 +1,13 @@
+# Todo Management
+โปรเจค Todo Management จัดการรายการสิ่งที่ต้องทำ
+## Features
+- สามารถจัดการระบบในรูปแบบ CRUD ได้ทั้ง User Task และ Comment
+- สามารถ Comment ไปยัง Task ที่ระบุได้หลาย Comment (One to Many)
+- สามารถเพิ่ม User ไปยัง Task ได้หลาย User (One to Many)
+- มีระบบ Authentication ด้วย JWT และ Bcrypt ในการป้องกันการเข้าถึง Route
+
 ## Documentation
+  
 ### Requirements
 - requires Node.js 0.10 or higher.
 
