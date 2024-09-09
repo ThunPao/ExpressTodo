@@ -23,7 +23,7 @@
 ## Route Users
 ### Create User
 POST: http://localhost:3000/users
-
+- Auth Bearer token is Required
 Body:
 
 ```javascript
@@ -36,11 +36,15 @@ Body:
 
 ### Get Users
 GET: http://localhost:3000/users
+- Auth Bearer token is Required
 
-GET: http://localhost:3000/users:id
+GET: http://localhost:3000/users:user_id
+- Auth Bearer token is Required
 
 ### Update User
-PUT: http://localhost:3000/users/:id
+PUT: http://localhost:3000/users/:user_id
+- Auth Bearer token is Required
+
 Body
 
 ```javascript
@@ -51,10 +55,14 @@ Body
 }
 ```
 ### Delete User
-DELETE: http://localhost:3000/users/:id
+DELETE: http://localhost:3000/users/:user_id
+- Auth Bearer token is Required
+
 ## Route Tasks
 ### Create Task
 POST: http://localhost:3000/tasks
+- Auth Bearer token is Required
+
 Body:
 
 ```javascript
@@ -70,11 +78,15 @@ Body:
 
 ### Get Task
 GET: http://localhost:3000/tasks
+- Auth Bearer token is Required
 
-GET: http://localhost:3000/tasks/:id
+GET: http://localhost:3000/tasks/:task_id
+- Auth Bearer token is Required
 
 ### Update Task
-PUT: http://localhost:3000/tasks/:id
+PUT: http://localhost:3000/tasks/:task_id
+- Auth Bearer token is Required
+
 Body:
 
 ```javascript
@@ -89,10 +101,14 @@ Body:
 ```
 
 ### DELETE TASK
-DELETE: http://localhost:3000/tasks/:id
+DELETE: http://localhost:3000/tasks/:task_id
+- Auth Bearer token is Required
+
 ## Route Comments
 ### Create Comment
 POST: http://localhost:3000/comments
+- Auth Bearer token is Required
+
 Body:
 
 ```javascript
@@ -106,11 +122,17 @@ Body:
 
 ### Get Comments
 GET: http://localhost:3000/comments
+- Auth Bearer token is Required
 
-GET: http://localhost:3000/comments/:id
+
+GET: http://localhost:3000/comments/:comment_id
+- Auth Bearer token is Required
+
 
 ### Update Comment
-PUT: http://localhost:3000/comments/:id
+PUT: http://localhost:3000/comments/:comment_id
+- Auth Bearer token is Required
+
 Body:
 
 ```javascript
@@ -121,10 +143,14 @@ Body:
 ```
 
 ### Delete Comment
-DELETE: http://localhost:3000/comments/:id
+DELETE: http://localhost:3000/comments/:comment_id
+- Auth Bearer token is Required
+
 
 ## Example: Get Task with User and Comments
 GET: http://localhost:3000/taskusercomment
+- Auth Bearer token is Required
+
 ##
 
 ## Example Authentication
