@@ -3,29 +3,38 @@ Hello world
 ## Route Users
 ### Create User
 POST: http://localhost:3000/users
+
 Body:
+```javascript
 {
     "username": "Kittithat Sensuk",
     "email": "kpzA1360@gmail.com",
     "password": "123123123"
 }
-###Get Users
+```
+
+### Get Users
 GET: http://localhost:3000/users
+
 GET: http://localhost:3000/users:id
-###Update User
+
+### Update User
 PUT: http://localhost:3000/users/:id
 Body
+```javascript
 {
     "username": "Updated Usr",
     "email": "usrupdate@email.com",
     "password": "521123"
 }
-###Delete User
+```
+### Delete User
 DELETE: http://localhost:3000/users/:id
-##Route Tasks
-###Create Task
+## Route Tasks
+### Create Task
 POST: http://localhost:3000/tasks
 Body:
+```javascript
 {
     "title": "NEW TASK",
     "description": "Task description",
@@ -34,12 +43,17 @@ Body:
     "due_date": "2024-09-09",
     "user_id": 1
 }
-###Get Task
+```
+
+### Get Task
 GET: http://localhost:3000/tasks
 GET: http://localhost:3000/tasks/:id
-###Update Task
+
+### Update Task
 PUT: http://localhost:3000/tasks/:id
 Body:
+```javascript
+
 {
     "title": "TASK UPDATED",
     "description": "Task description UPDATED",
@@ -47,26 +61,36 @@ Body:
     "priority": "HIGH",
     "due_date": "2024-09-09"
 }
-###DELETE TASK
+```
+
+### DELETE TASK
 DELETE: http://localhost:3000/tasks/:id
-##Route Comments
-###Create Comment
+## Route Comments
+### Create Comment
 POST: http://localhost:3000/comments
 Body:
+```javascript
+
 {
     "task_id": "1",
     "user_id": "1",
     "comment": "New Comment"
 }
-###Get Comments
+```
+
+### Get Comments
 GET: http://localhost:3000/comments
 GET: http://localhost:3000/comments/:id
 
-###Update Comment
+### Update Comment
 PUT: http://localhost:3000/comments/:id
 Body:
+```javascript
+
 {
     "comment": "Comment Updated"
 }
-###Delete Comment
+```
+
+### Delete Comment
 DELETE: http://localhost:3000/comments/:id
