@@ -50,7 +50,7 @@ Body
 ```javascript
 {
     "username": "Updated Usr",
-    "email": "usrupdate@email.com",
+    "email": "updated@email.com",
     "password": "521123"
 }
 ```
@@ -172,8 +172,8 @@ Result:
 {
     "user": {
         "user_id": 1,
-        "username": "Testfa",
-        "email": "fafafa@gmail.com",
+        "username": "Kittithat Sensuk",
+        "email": "kpzA1360@gmail.com",
         "password": "$2a$10$ykNMcrh.OczYbaP0iRWdUusnCylZOXEsceoc65AFoA.GWO62TNiQC",
         "created_at": "2024-09-09T11:56:37.000Z",
         "updated_at": "2024-09-09T11:56:37.000Z"
@@ -200,8 +200,8 @@ Result:
 {
     "user": {
         "user_id": 1,
-        "username": "Test",
-        "email": "test@gmail.com",
+        "username": "Kittithat Sensuk",
+        "email": "kpzA1360@gmail.com",
         "password": "$2a$10$ykNMcrh.OczYbaP0iRWdUusnCylZOXEsceoc65AFoA.GWO62TNiQC",
         "created_at": "2024-09-09T11:56:37.000Z",
         "updated_at": "2024-09-09T11:56:37.000Z"
