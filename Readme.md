@@ -1,10 +1,31 @@
 ## Documentation
-Hello world
+### Requirements
+- requires Node.js 0.10 or higher.
+
+
+### Installation
+
+#### 1. Setup .ENV Variables
+- DATABASE_URL (Mysql Database Connection string)
+- JWT_SECRET (Secret Password of a JWT)
+- PORT (Server Port Default is 3000)
+
+#### 2.Npm
+- npm install
+#### 3.NPX
+- npm install -g npx
+#### 4.Prisma
+- npx prisma generate
+- npx prisma db push
+###
+
+ตัวอย่างการส่ง Request Method
 ## Route Users
 ### Create User
 POST: http://localhost:3000/users
 
 Body:
+
 ```javascript
 {
     "username": "Kittithat Sensuk",
@@ -21,6 +42,7 @@ GET: http://localhost:3000/users:id
 ### Update User
 PUT: http://localhost:3000/users/:id
 Body
+
 ```javascript
 {
     "username": "Updated Usr",
@@ -34,6 +56,7 @@ DELETE: http://localhost:3000/users/:id
 ### Create Task
 POST: http://localhost:3000/tasks
 Body:
+
 ```javascript
 {
     "title": "NEW TASK",
@@ -47,11 +70,13 @@ Body:
 
 ### Get Task
 GET: http://localhost:3000/tasks
+
 GET: http://localhost:3000/tasks/:id
 
 ### Update Task
 PUT: http://localhost:3000/tasks/:id
 Body:
+
 ```javascript
 
 {
@@ -69,6 +94,7 @@ DELETE: http://localhost:3000/tasks/:id
 ### Create Comment
 POST: http://localhost:3000/comments
 Body:
+
 ```javascript
 
 {
@@ -80,11 +106,13 @@ Body:
 
 ### Get Comments
 GET: http://localhost:3000/comments
+
 GET: http://localhost:3000/comments/:id
 
 ### Update Comment
 PUT: http://localhost:3000/comments/:id
 Body:
+
 ```javascript
 
 {
@@ -94,3 +122,21 @@ Body:
 
 ### Delete Comment
 DELETE: http://localhost:3000/comments/:id
+
+## Example: Get Task with User and Comments
+GET: http://localhost:3000/taskusercomment
+##
+
+## Example Authentication
+
+### Login
+POST: http://localhost:3000/login
+
+Body:
+```javascript
+{
+    "email": "kpzA1360@gmail.com",
+    "password": "123123123"
+}
+```
+###
