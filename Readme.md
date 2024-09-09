@@ -19,8 +19,9 @@
 - JWT_SECRET (Secret Password of a JWT)
 - PORT (Server Port Default is 3000)
 
-#### 2.Npm
+#### 2.Npm or Bun (Optional)
 - npm install
+- bun i
 #### 3.NPX
 - npm install -g npx
 #### 4.Prisma
