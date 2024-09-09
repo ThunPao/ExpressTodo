@@ -35,15 +35,15 @@ app.get('/protected', authenticateJWT, (req, res) => {
   },
   );
 });
-
+// เรียกใช้ router /login /register
+app.use(authRouter);
 // เรียกใช้ routes CRUD ตามเส้นที่ระบุ (Auth Required)
 app.use('/users', authenticateJWT,userRouter);
 app.use('/tasks', authenticateJWT,taskRouter);
 app.use('/comments', authenticateJWT,commentRouter);
 app.use(authenticateJWT,taskUserRouter);
 
-// เรียกใช้ router /login /register
-app.use(authRouter);
+
 
 
 
