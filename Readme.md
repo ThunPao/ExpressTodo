@@ -139,4 +139,48 @@ Body:
     "password": "123123123"
 }
 ```
+- after login success you'll get token
+Result:
+
+```javascript
+{
+    "user": {
+        "user_id": 1,
+        "username": "Testfa",
+        "email": "fafafa@gmail.com",
+        "password": "$2a$10$ykNMcrh.OczYbaP0iRWdUusnCylZOXEsceoc65AFoA.GWO62TNiQC",
+        "created_at": "2024-09-09T11:56:37.000Z",
+        "updated_at": "2024-09-09T11:56:37.000Z"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcyNTg4MzE0NywiZXhwIjoxNzI1ODg2NzQ3fQ.r_8damyZFKwXNbSlKdQlH6DMa_oC6gK2cl1GyZMz0yU"
+}
+```
+
+###
+### Register
+POST: http://localhost:3000/register
+
+Body:
+```javascript
+{
+    "username": "Kittithat Sensuk",
+    "email": "kpzA1360@gmail.com",
+    "password": "123123123"
+}
+```
+- after register success you'll get token
+Result:
+```javascript
+{
+    "user": {
+        "user_id": 1,
+        "username": "Test",
+        "email": "test@gmail.com",
+        "password": "$2a$10$ykNMcrh.OczYbaP0iRWdUusnCylZOXEsceoc65AFoA.GWO62TNiQC",
+        "created_at": "2024-09-09T11:56:37.000Z",
+        "updated_at": "2024-09-09T11:56:37.000Z"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcyNTg4Mjk5NywiZXhwIjoxNzI1ODg2NTk3fQ.HfkgzYPVbPrSCo3KEIoPiV6wyNfhwJyXAClvSjA64Ts"
+}
+```
 ###
