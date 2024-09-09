@@ -165,7 +165,7 @@ Body:
     "password": "123123123"
 }
 ```
-- after login success you'll get token
+- after login success you'll get user data and  token
 Result:
 
 ```javascript
@@ -194,7 +194,7 @@ Body:
     "password": "123123123"
 }
 ```
-- after register success you'll get token
+- after register success you'll get user data and  token
 Result:
 ```javascript
 {
